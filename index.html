@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flask Database Query</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      display: none; /* Initially hidden */
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Polls</h1>
+  <form id="queryForm">
+    <label for="songtitle">Song Title:</label>
+    <input type="text" id="songtitle" name="songtitle" required><br><br>
+
+    <label for="character">Character:</label>
+    <input type="text" id="character" name="character" required><br><br>
+
+    <label for="episode">Episode:</label>
+    <input type="text" id="episode" name="episode" required><br><br>
+
+    <label for="dropdown1">Season:</label>
+    <select id="dropdown1" name="dropdown1" required>
+      <option value="option0">Any season</option>
+      <option value="option1">Season 1</option>
+      <option value="option2">Season 2</option>
+      <option value="option3">Season 3</option>
+      <option value="option4">Season 4</option>
+      <option value="option5">Season 5</option>
+      <option value="option6">Season 6</option>
+      <option value="option7">Season 7</option>
+      <option value="option8">Season 8</option>
+      <option value="option9">Season 9</option>
+      <option value="option10">Equestria Girls</option>
+      <option value="option11">Movie</option>
+      <option value="option12">Specials</option>
+    </select><br><br>
+
+    <label for="dropdown2">Tournament:</label>
+    <select id="dropdown2" name="dropdown2" required>
+      <option value="option0">Any tournament</option>
+      <option value="option1">MLP Song Tournament</option>
+      <option value="option2">EqG Song Tournament</option>
+      <option value="option3">FiM vs EqG</option>
+      <option value="option4">Worst MLP Song Tournament</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <!-- Add more columns as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data will be appended here dynamically -->
+    </tbody>
+  </table>
+
+  <script>
+    src="script.js"
+  </script>
+</body>
+</html>
